@@ -1,7 +1,6 @@
-RewriteEngine on
+Options +FollowSymLinks
+RewriteEngine On
 
-RewriteCond %{HTTP_HOST} ^www.app.taxi.websib42.ru$ [NC]
-RewriteRule ^(.*)$ https://app.taxi.websib42.ru/$1 [R=301,L]
-
-RewriteRule ^$ public/ [L]
-RewriteRule ((?s).*) public/$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
