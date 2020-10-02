@@ -21,6 +21,7 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('add-users-component', require('./components/AddButtonUsers.vue').default);
+Vue.component('side-bar-menu-component', require('./components/SidebarMenu.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
