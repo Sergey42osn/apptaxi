@@ -16,64 +16,18 @@
 
     </head>
 
-        <body class="contactspage" id="top">
+    <body class="contactspage" id="top">111
+
+        <div id="app">
 
 
-            <div class="wrap-body">
 
-                <div id="wraper_content">
-
-                    <div class="main">
-
-                        <!--==============================header=================================-->
-
-                        <header class="">
-
-                            <div class="menu_block">
-
-                                <div class="container_12">
-
-                                    <div class="grid_12">
-                                        <a href="#" class="mob-button"><i class="fa fa-bars" aria-hidden="true"></i></a>
-
-                                        @include('layouts.login-panel')
-                                        
-                                        <div class="clear"></div>
-
-                                    </div>
-
-                                    <div class="clear"></div>
-
-                                </div>
-
-                            </div>                   
-                            <div class="clear"></div>
-
-                        </header>                   
-
-                    <!--==============================Content=================================-->
-                    
-                     @yield('home-content')
-                     @yield('register-content')
-                     @yield('login-content')
-
-                    </div>
-
-                    <!--==============================footer=================================-->
-
-                
-
-                    <footer>
-
-                    </footer>
-                </div>
-                </div>
-            </div>
-
-    <a href="#" id="toTop"><span id="toTopHover"></span></a>        
+            
+        </div>
+        
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script>
+            <script>
                                     
                             function initMap() {
                               var map = new google.maps.Map(document.getElementById('map'), {
@@ -185,10 +139,15 @@
                                 
                             }
         </script>
-        <script src="taxi-region142.ru/js/main.js"></script>    
+
+        <script>
+            var BASE_URL = '{{ URL::to('/') }}';
+        </script>
+
+        <script src="{{ asset('js/app.js') }}"></script>  
         
-    <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwzTpgWpLqRWBEk3U9b2Dx8LXJYAAAUyA&amp;signed_in=true&amp;callback=initMap"></script>
+        <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwzTpgWpLqRWBEk3U9b2Dx8LXJYAAAUyA&amp;signed_in=true&amp;callback=initMap"></script>
                     
-</body>
+    </body>
 
 </html>

@@ -16,7 +16,7 @@ class IndexController extends Controller
 
         //dd($article);
 
-        return view('home',['currenthome' => 'current',
+        return view('app',['currenthome' => 'current',
         					'title'       => 'Такси Регион 42.Осинники,Калтан ,Кемеровская область',
         					'classpage'   => 'homepage',
                             'url'         => 'home',

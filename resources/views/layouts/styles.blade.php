@@ -1,6 +1,6 @@
 <link rel="icon" href="images/favicon.ico">
-<link rel="stylesheet" href="{{URL::asset('css/font-awesome.min.css')}}">
-<link rel="stylesheet" href="{{URL::asset('css/style.css')}}">
+<link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
+<link rel="stylesheet" href="{{asset('css/style.css')}}">
 
 <!--[if lt IE 8]>
 
