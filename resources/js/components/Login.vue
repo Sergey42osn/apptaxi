@@ -78,7 +78,7 @@
     export default {
         data() {
             return {
-                loginpanel:false
+                //loginpanel:false
             }
         },
         mounted() {

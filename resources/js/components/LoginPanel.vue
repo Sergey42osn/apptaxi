@@ -1,55 +1,54 @@
 <template>
-   <div class="login-con">
 
-	    <ul class="nav navbar-nav navbar-right">
+	<div class="container">
+    	<div class="row">
+    		<div class="navbar-box">
+    			<ul class="nav navbar-nav navbar-right">
 
-	    <!-- Authentication Links -->
+		    	<!-- Authentication Links -->
 
-	   <router-link :to="{name: 'login'}">Войти</router-link>
+		   		<router-link :to="{name: 'login'}">Войти</router-link>
 
-	    <router-link :to="{name: 'register'}">Зарегестрироваться</router-link>
+		    	<router-link :to="{name: 'register'}">Зарегестрироваться</router-link>
 
-	      <!--  <li class="dropdown">
+		      <!--  <li class="dropdown">
 
-	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
+		            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
 
-	                {{ Auth::user()->name }} <span class="caret"></span>
+		                {{ Auth::user()->name }} <span class="caret"></span>
 
-	            </a>
+		            </a>
 
+		            <ul class="dropdown-menu">
 
+		                <li>
 
-	            <ul class="dropdown-menu">
+		                    <a href="{{ route('logout') }}"
 
-	                <li>
+		                        onclick="event.preventDefault();
 
-	                    <a href="{{ route('logout') }}"
+		                                 document.getElementById('logout-form').submit();">
 
-	                        onclick="event.preventDefault();
+		                        Выход
 
-	                                 document.getElementById('logout-form').submit();">
+		                    </a>
 
-	                        Выход
+		                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 
-	                    </a>
+		                        {{ csrf_field() }}
 
+		                    </form>
 
+		                </li>
 
-	                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+		            </ul>
 
-	                        {{ csrf_field() }}
+		        </li>-->
+		    </ul> 
+    		</div>	
+    	</div>
+    </div> 
 
-	                    </form>
-
-	                </li>
-
-	            </ul>
-
-	        </li>-->
-
-	    </ul>  
-
-	</div>
 </template>
 
 <script>
@@ -72,3 +71,13 @@
         }
     }
 </script>
+
+<style>
+
+.navbar-box {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+</style>

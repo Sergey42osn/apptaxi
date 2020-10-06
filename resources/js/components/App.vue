@@ -1,6 +1,9 @@
 <template>
 	<div>
-		<LoginPanel v-if='loginpanel'></LoginPanel>
+		<LoginPanel
+			v-if="loginpanel == 'show'"
+			@Hide="Hide"
+		></LoginPanel>
     	<router-view></router-view>
 	</div>
 </template>
@@ -14,13 +17,18 @@
     	//},
     	data() {
     		return {
-    			loginpanel: true,
+    			loginpanel: 'show',
     			user: null,
     			loading: false,
     			initiated: false
     			//req: axios.creat({
     				//baseurl: BASE_URL
     			//})
+    		}
+    	},
+    	methods: {
+    		Hide(){
+    			this.loginpanel = 'hide';
     		}
     	},
         mounted() {
