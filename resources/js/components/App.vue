@@ -2,9 +2,8 @@
 	<div>
 		<LoginPanel
 			v-if="loginpanel == 'show'"
-			@Hide="Hide"
 		></LoginPanel>
-    	<router-view></router-view>
+    	<router-view @Hide="Hide"></router-view>
 	</div>
 </template>
 
@@ -15,6 +14,7 @@
     	//components:{
     		//LoginPanel
     	//},
+    	//props: ['loginpanel'],
     	data() {
     		return {
     			loginpanel: 'show',
@@ -29,6 +29,7 @@
     	methods: {
     		Hide(){
     			this.loginpanel = 'hide';
+    			console.log('hide.')
     		}
     	},
         mounted() {

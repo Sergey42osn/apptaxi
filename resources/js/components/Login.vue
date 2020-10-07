@@ -5,10 +5,10 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Авторизация</div>
                
-                    <div class="alert alert-info"></div>
+                    <div class="alert alert-info" v-if="info"></div>
             
            
-                    <div class="alert alert-danger"></div>
+                    <div class="alert alert-danger" v-if="errors"></div>
              
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="">
@@ -78,11 +78,20 @@
     export default {
         data() {
             return {
-                //loginpanel:false
+                validate: {
+                    errors: false
+                },
+                info: false
+            }
+        },
+        methods:{
+            Hide(){
+               this.$emit('Hide'); 
             }
         },
         mounted() {
-            console.log('Login mounted.')
+            console.log('Login mounted.');
+            this.Hide();
         }
     }
 </script>

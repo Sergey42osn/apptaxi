@@ -70,6 +70,15 @@
     export default {
         mounted() {
             console.log('Register mounted.')
+        },
+        methods:{
+            Hide(){
+               this.$emit('Hide'); 
+            }
+        },
+        mounted() {
+            console.log('Login mounted.');
+            this.Hide();
         }
     }
 </script>

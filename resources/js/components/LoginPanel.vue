@@ -76,7 +76,7 @@
 
 .navbar-box {
     display: flex;
-    justify-content: end;
+    justify\-content: end;
     width: 100%;
 }
 
