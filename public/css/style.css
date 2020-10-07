@@ -673,6 +673,10 @@ textarea.form-control {
 .navbar-right{
     justify-content: flex-end;
 }
+.form-group_box {
+    display: flex;
+    justify\-content: center;
+}
 @media only screen and (max-width:1200px){.banner{font-family:'Roboto Condensed', sans-serif;background-color:#e5e5e7;margin:55px 0 55px;overflow:hidden;position:relative;padding:10px;min-height:325px;}
 .banner a{font-size:30px;float:right;position:relative;margin-top:35px;color:#959596;}
 .maxheight span{font-size:1.5em;}
