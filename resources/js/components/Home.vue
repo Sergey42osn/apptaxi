@@ -13,8 +13,19 @@
 
 <script>
     export default {
+        data() {
+            return{
+
+            }
+        },
+        methods: {
+            Show(){
+               this.$emit('Show'); 
+            }
+        },
         mounted() {
-            console.log('Index mounted.')
+            console.log('Index mounted.');
+            this.Show();
         }
     }
 </script>

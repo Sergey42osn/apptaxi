@@ -674,8 +674,18 @@ textarea.form-control {
     justify-content: flex-end;
 }
 .form-group_box {
+    position: relative;
     display: flex;
     justify\-content: center;
+}
+.help-block {
+    position: absolute;
+    color: red;
+    font\-size: 12px;
+    top: -16px;
+}
+.form-control:focus+.help-block{
+    display: none;
 }
 @media only screen and (max-width:1200px){.banner{font-family:'Roboto Condensed', sans-serif;background-color:#e5e5e7;margin:55px 0 55px;overflow:hidden;position:relative;padding:10px;min-height:325px;}
 .banner a{font-size:30px;float:right;position:relative;margin-top:35px;color:#959596;}

@@ -3,7 +3,7 @@
 		<LoginPanel
 			v-if="loginpanel == 'show'"
 		></LoginPanel>
-    	<router-view @Hide="Hide"></router-view>
+    	<router-view @Hide="Hide" @Show="Show"></router-view>
 	</div>
 </template>
 
@@ -30,7 +30,11 @@
     		Hide(){
     			this.loginpanel = 'hide';
     			console.log('hide.')
-    		}
+    		},
+            Show(){
+                this.loginpanel = 'show';
+                console.log('show.')
+            }
     	},
         mounted() {
             console.log('App mounted.')
