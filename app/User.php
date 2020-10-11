@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Notifications\VerifyEmail;
+use Illuminate\Support\Str;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -46,7 +47,7 @@ class User extends Authenticatable implements MustVerifyEmail
         parent::boot();
 
         static::creating(function ($user) {
-            $user->verifyToken = str_random(30);
+            $user->verifyToken =  Str::random(32);
         });
     }
 

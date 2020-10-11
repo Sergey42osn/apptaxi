@@ -14,9 +14,7 @@ let routes = [
     {
         path: '/login',
         name: 'login',
-        component: Login,
-        params: {loginpanel: 'hide' },
-       // props:{ loginpanel:false }
+        component: Login
     },
     {
         path: '/register',

@@ -103,6 +103,7 @@
 </template>
 
 <script>
+    import axios from 'axios';
     export default {
         data() {
             return{
@@ -193,12 +194,13 @@
                  if (this.password === this.password_confirmation)
                 {
                     console.log(this.password);
-                    let url = "/register"
+                    let url = "/api/v1/register"
                  
-                    this.$http.post(url, {
+                    axios.post(url, {
                         name: this.name,
                         email: this.email,
-                        password: this.password
+                        password: this.password,
+                        password_confirmation: this.password_confirmation 
                     })
                     .then(response => {
                         localStorage.setItem('user',JSON.stringify(response.data.user))

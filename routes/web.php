@@ -11,19 +11,21 @@
 |
 */
 
-Auth::routes();
+Route::get('/{any}','IndexController@index')->where('any','.*');
 
-Route::get('/register', 'Auth\RegisterController@showRegister')->name('register');
-Route::post('/register', 'Auth\RegisterController@Register')->name('register');
+//Auth::routes();
+
+//Route::get('/register', 'Auth\RegisterController@showRegister')->name('register');
+//Route::post('/register', 'Auth\RegisterController@Register')->name('register');
 
 //Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/', 'IndexController@index');
-Route::get('/home', 'IndexController@index')->name('');
+//Route::get('/', 'IndexController@index');
+//Route::get('/home', 'IndexController@index')->name('');
 
-Route::get('/login', 'Auth\MyAuthController@showLogin')->middleware('guest')->name('login');
+//Route::get('/login', 'Auth\MyAuthController@showLogin')->middleware('guest')->name('login');
 
-Route::post('/login', 'Auth\MyAuthController@postLogin')->middleware('guest')->name('login');
+//Route::post('/login', 'Auth\MyAuthController@postLogin')->middleware('guest')->name('login');
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function() {
 	Route::get('login', 'LoginController@index');

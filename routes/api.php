@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['namespace' => 'Api', 'as' => 'api.'], function () {
+Route::group(['prefix' => '/v1','namespace' => 'Api', 'as' => 'api.'], function () {
 
-    Route::post('login', 'LoginController@login')->name('login');
+    Route::post('login', 'Auth\LoginController@login')->name('login');
 
-    Route::post('register', 'RegisterController@register')->name('register');
+    Route::post('register', 'Auth\RegisterController@register')->name('register');
 
     Route::group(['middleware' => ['auth:api']], function () {
 
